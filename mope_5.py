@@ -454,7 +454,7 @@ def after_main_2(x1_min, x1_max, x2_min, x2_max, x3_min, x3_max,m=3 , N=15, p=0.
         beta9 = sum([matrix_x_normal[_][9] * y_average_list[_] for _ in range(len(matrix_x_normal))]) / N
         beta10 = sum([matrix_x_normal[_][10] * y_average_list[_] for _ in range(len(matrix_x_normal))]) / N
 
-        beta_list = [beta0, beta1, beta2, beta3, beta4, beta5, beta6, beta7]
+        beta_list = [beta0, beta1, beta2, beta3, beta4, beta5, beta6, beta7,beta8,beta9,beta10]
 
         # t list
         t_list = [abs(beta) / s_b_s for beta in beta_list]
@@ -487,7 +487,7 @@ def after_main_2(x1_min, x1_max, x2_min, x2_max, x3_min, x3_max,m=3 , N=15, p=0.
         d = len(beta_list[np.array(beta_list) != 0])
         f4 = N - d
 
-       
+
         s_ad = m / f4 * sum([(ch2_list[_] - y_average_list[_]) ** 2 for _ in range(len(y_average_list))])
         Fp = s_ad / s2_b_s
         Ft = f.ppf(p, f4, f3)
