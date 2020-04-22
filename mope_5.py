@@ -279,7 +279,7 @@ def after_main(x1_min, x1_max, x2_min, x2_max, x3_min, x3_max,matrix_y,m=3,N=8,p
             new_result = False
             while not new_result:
                 print('\n')
-                new_result = after_main(x1_min, x1_max, x2_min, x2_max, x3_min, x3_max,m)
+                new_result = after_main_2(x1_min, x1_max, x2_min, x2_max, x3_min, x3_max,m)
                 if not new_result:
                     m += 1
         else:
